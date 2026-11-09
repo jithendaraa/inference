@@ -1,0 +1,7 @@
+PyTorch: 2.11.0+cu128
+CUDA runtime: 12.8
+GPU: NVIDIA A100-SXM4-40GB
+Shape: (64, 64) for x, w, b
+Dtype: bfloat16
+Schedule: wait=1, warmup=5, active=3, repeat=1
+Extra warmup: False
