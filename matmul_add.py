@@ -39,12 +39,12 @@ def main():
     # Figure 11: record all 20 steps, starting at step 0.
     with profile(
         activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
-        schedule=schedule(wait=1, warmup=0, active=3, repeat=1),
+        schedule=schedule(wait=0, warmup=0, active=20, repeat=1),
         record_shapes=False,
         profile_memory=False,
         with_stack=False,
     ) as prof:
-        for _ in range(3):
+        for _ in range(20):
             step()
             prof.step()
     torch.cuda.synchronize()
